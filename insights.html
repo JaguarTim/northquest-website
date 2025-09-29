@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insights - Northquest Marketing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    .article-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .article-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body class="font-sans text-gray-800">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-white shadow-md">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between p-4 md:px-8" aria-label="Primary Navigation">
+      <a href="index.html" class="text-2xl font-bold tracking-tight text-gray-900 select-none">NORTHQUEST MARKETING</a>
+      <ul class="hidden md:flex space-x-8 text-gray-700 text-sm font-medium">
+        <li><a href="index.html" class="hover:underline">Home</a></li>
+        <li><a href="insights.html" class="hover:underline font-semibold text-indigo-600">Insights</a></li>
+        <li><a href="about.html" class="hover:underline">About</a></li>
+        <li><a href="contact.html" class="hover:underline">Contact</a></li>
+      </ul>
+      <!-- Hamburger Mobile -->
+      <button id="mobileMenuButton" aria-label="Toggle menu" class="md:hidden hamburger focus:outline-none">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div id="mobileMenu" class="hidden md:hidden bg-white shadow-md border-t border-gray-200">
+      <ul class="flex flex-col p-4 space-y-2 text-gray-800 font-medium text-base">
+        <li><a href="index.html" class="block px-3 py-2 hover:bg-gray-100 rounded">Home</a></li>
+        <li><a href="insights.html" class="block px-3 py-2 hover:bg-gray-100 rounded font-semibold text-indigo-600">Insights</a></li>
+        <li><a href="about.html" class="block px-3 py-2 hover:bg-gray-100 rounded">About</a></li>
+        <li><a href="commitments.html" class="block px-3 py-2 hover:bg-gray-100 rounded">Commitments</a></li>
+        <li><a href="contact.html" class="block px-3 py-2 hover:bg-gray-100 rounded">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative h-72 flex flex-col items-center justify-center text-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80');">
+    <div class="absolute inset-0 bg-gradient-to-r from-indigo-900/70 to-purple-900/70"></div>
+    <div class="relative z-10 px-6 flex flex-col items-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4" data-aos="fade-down">Insights & Articles</h1>
+      <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-6" data-aos="fade-up" data-aos-delay="150">
+        Thought leadership, strategies, and trends shaping the industry.
+      </p>
+      <!-- Request a Consultation Button -->
+      <button onclick="window.location.href='booking.html'" class="bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition font-semibold" data-aos="fade-up" data-aos-delay="250">
+        Request a Consultation
+      </button>
+    </div>
+  </section>
+
+  <!-- Insights Articles -->
+  <section class="py-20 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3" id="articlesContainer">
+
+        <!-- Article Card Example 1 -->
+        <article class="article-card bg-white rounded-xl shadow overflow-hidden" data-aos="fade-up">
+          <img src="ai1.jpg" alt="AI in Business" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Transforming Industries with AI</h3>
+            <p class="text-gray-600 mb-4 text-sm">Explore how AI is reshaping sectors and driving growth worldwide with actionable insights and case studies.</p>
+            <a href="#" class="text-indigo-600 hover:underline font-semibold inline-flex items-center">Read More
+              <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article Card Example 2 -->
+        <article class="article-card bg-white rounded-xl shadow overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=800&q=80" alt="Sustainability" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Driving Sustainable Growth</h3>
+            <p class="text-gray-600 mb-4 text-sm">How companies can integrate sustainability into core strategy and operations for long-term impact.</p>
+            <a href="#" class="text-indigo-600 hover:underline font-semibold inline-flex items-center">Read More
+              <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article Card Example 3 -->
+        <article class="article-card bg-white rounded-xl shadow overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://images.unsplash.com/photo-1562577309-2592ab84b1bc?auto=format&fit=crop&w=800&q=80" alt="Market Strategy" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Navigating Market Uncertainty</h3>
+            <p class="text-gray-600 mb-4 text-sm">Insights into strategic risk management during volatile markets to help leaders make better decisions.</p>
+            <a href="#" class="text-indigo-600 hover:underline font-semibold inline-flex items-center">Read More
+              <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Load More Button -->
+      <div class="text-center mt-12">
+        <button id="loadMore" class="px-6 py-3 bg-indigo-600 text-white rounded-full shadow hover:bg-indigo-700 transition font-semibold">Load More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 bg-gray-900 text-gray-400 text-center">
+    <p>&copy; 2025 Northquest Marketing. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000, once: true });</script>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobileMenuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenuButton.classList.toggle('open');
+    });
+
+    // Example Load More functionality
+    const loadMore = document.getElementById('loadMore');
+    const articlesContainer = document.getElementById('articlesContainer');
+    loadMore.addEventListener('click', () => {
+      for(let i=0;i<3;i++){
+        const card = document.createElement('article');
+        card.className = 'article-card bg-white rounded-xl shadow overflow-hidden';
+        card.setAttribute('data-aos','fade-up');
+        card.innerHTML = `
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="New Article" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">New Insight Article</h3>
+            <p class="text-gray-600 mb-4 text-sm">This is a dynamically loaded insight article. Learn and explore trends with us.</p>
+            <a href="#" class="text-indigo-600 hover:underline font-semibold inline-flex items-center">Read More
+              <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        `;
+        articlesContainer.appendChild(card);
+        AOS.refresh();
+      }
+    });
+  </script>
+
+</body>
+</html>

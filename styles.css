@@ -1,0 +1,56 @@
+/* Custom scrollbar for dropdown menus */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #64748b;
+  border-radius: 10px;
+}
+
+/* Transition for dropdown menus */
+.dropdown-menu {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.dropdown:hover > .dropdown-menu,
+.dropdown:focus-within > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Hamburger icon animation */
+.hamburger span {
+  transition: all 0.3s ease-in-out;
+  display: block;
+  height: 2px;
+  background: #111827;
+  border-radius: 2px;
+}
+.hamburger span:nth-child(1) {
+  width: 24px;
+  margin-bottom: 5px;
+}
+.hamburger span:nth-child(2) {
+  width: 18px;
+  margin-bottom: 5px;
+}
+.hamburger span:nth-child(3) {
+  width: 12px;
+}
+
+/* Toggle hamburger open */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -4px);
+}

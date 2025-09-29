@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NorthQuest - Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Hamburger icon animation */
+    .hamburger span {
+      transition: all 0.3s ease-in-out;
+      display: block;
+      height: 2px;
+      background: #111827;
+      border-radius: 2px;
+    }
+    .hamburger span:nth-child(1) { width: 24px; margin-bottom: 5px; }
+    .hamburger span:nth-child(2) { width: 18px; margin-bottom: 5px; }
+    .hamburger span:nth-child(3) { width: 12px; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+  </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-white shadow-md">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between p-4 md:px-8">
+      <!-- Logo -->
+      <a href="index.html" class="text-2xl font-bold tracking-tight text-gray-900 select-none">
+        NORTHQUEST MARKETING
+      </a>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-10 text-gray-700 text-sm font-medium">
+        <li><a href="commitments.html" class="hover:underline">Our Commitments</a></li>
+        <li><a href="services.html" class="hover:underline">Contact Us</a></li>
+        <li><a href="contact.html" class="hover:underline">Services</a></li>
+        <li><a href="blog.html" class="hover:underline">Blog</a></li>
+        <li><a href="insights.html" class="hover:underline">Insights</a></li>
+        <li><a href="about.html" class="hover:underline">About</a></li>
+      </ul>
+
+      <!-- Hamburger (Mobile) -->
+      <button id="mobileMenuButton" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu"
+        class="md:hidden hamburger focus:outline-none">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white shadow-md border-t border-gray-200">
+      <ul class="flex flex-col p-4 space-y-2 text-gray-800 font-medium text-base">
+        <li><a href="commitments.html" class="block px-3 py-2 hover:bg-gray-100 rounded">Our Commitments</a></li>
+        <li><a href="services.html" class="block px-3 py-2 hover:bg-gray-100 rounded">Our Services</a></li>
+        <li><a href="contact.html" class="block px-3 py-2 hover:bg-gray-100 rounded">Contact Us</a></li>
+        <li><a href="insights.html" class="block px-3 py-2 hover:bg-gray-100 rounded">Insights</a></li>
+        <li><a href="about.html" class="block px-3 py-2 hover:bg-gray-100 rounded">About</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gray-900 text-white" style="background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;">
+    <div class="absolute inset-0 bg-black opacity-60"></div>
+    <div class="max-w-7xl mx-auto relative px-6 py-32 md:py-48">
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight max-w-3xl">
+        Solving your most complex challenges.
+      </h1>
+      <p class="mt-6 max-w-xl text-lg md:text-xl text-gray-300">
+        Trusted by clients worldwide for strategy, operations, digital transformation, and more.
+      </p>
+      <a href="booking.html" class="inline-block mt-10 px-8 py-4 bg-indigo-600 hover:bg-indigo-700 rounded-md text-lg font-semibold transition">
+        Request a Consultation
+      </a>
+    </div>
+  </section>
+
+  <!-- Insights Section -->
+  <section class="max-w-7xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-bold text-gray-900 mb-12">Latest Insights</h2>
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Insight Card 1 -->
+      <article class="group border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+        <img src="img6.jpg" alt="Business meeting" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors">
+            Transforming Industries with AI
+          </h3>
+          <p class="text-gray-600 mb-4 text-sm">
+            Explore how AI is reshaping sectors and driving growth globally.
+          </p>
+          <a href="#" class="inline-flex items-center text-indigo-600 hover:underline font-semibold">
+            Read More
+          </a>
+        </div>
+      </article>
+
+      <!-- Insight Card 2 -->
+      <article class="group border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+        <img src="img7.jpg" alt="Financial graphs" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors">
+            Navigating Market Uncertainty
+          </h3>
+          <p class="text-gray-600 mb-4 text-sm">
+            Insights into strategic risk management during volatile markets.
+          </p>
+          <a href="#" class="inline-flex items-center text-indigo-600 hover:underline font-semibold">
+            Read More
+          </a>
+        </div>
+      </article>
+
+      <!-- Insight Card 3 -->
+      <article class="group border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+        <img src="img4.jpg" alt="Sustainability" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors">
+            Driving Sustainable Growth
+          </h3>
+          <p class="text-gray-600 mb-4 text-sm">
+            How companies can integrate sustainability into core strategy.
+          </p>
+          <a href="#" class="inline-flex items-center text-indigo-600 hover:underline font-semibold">
+            Read More
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-gray-700 text-center py-10">
+    &copy; 2025 NorthQuest Marketing. All rights reserved.
+  </footer>
+
+  <script>
+    // Toggle mobile menu visibility
+    const mobileMenuButton = document.getElementById('mobileMenuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+      mobileMenuButton.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('hidden');
+      mobileMenuButton.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services | Northquest Marketing</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    .card-details {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .card-details.open {
+      max-height: 200px;
+      padding-top: 1rem;
+      padding-bottom: 0.5rem;
+    }
+    .arrow {
+      transition: transform 0.3s ease;
+    }
+    .arrow.open {
+      transform: rotate(90deg);
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-900">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-extrabold text-blue-900">Northquest Marketing</h1>
+      <ul class="flex space-x-6 text-sm font-semibold text-slate-700">
+        <li><a href="index.html" class="hover:text-blue-700">Home</a></li>
+        <li><a href="services.html" class="text-blue-700 font-bold">Services</a></li>
+        <li><a href="commitments.html" class="hover:text-blue-700">Our commitments</a></li>
+        <li><a href="blog.html" class="hover:text-blue-700">Our Blog</a></li>
+        <li><a href="contact.html" class="hover:text-blue-700">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-slate-100 py-16 text-center">
+    <h2 class="text-4xl font-extrabold mb-4 text-blue-900" data-aos="fade-down">Our Services</h2>
+    <p class="text-slate-600 max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+      We deliver high-impact digital marketing solutions that transform organizations and drive sustainable growth.
+    </p>
+  </header>
+
+  <!-- Services Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        <!-- Website Marketing Card -->
+        <div
+          class="bg-slate-50 p-6 rounded-xl shadow-md hover:shadow-xl hover:ring hover:ring-blue-100 hover:scale-[1.02] transition cursor-pointer"
+          onclick="toggleCard(this)"
+          role="button"
+          tabindex="0"
+          aria-expanded="false"
+          aria-controls="details1"
+          data-aos="fade-up"
+        >
+          <img src="marketing.jpg" 
+               alt="Website Marketing" 
+               class="mb-4 mx-auto w-50 h-50 object-contain rounded-full shadow-md" />
+          <h3 class="text-xl font-semibold text-blue-900 mb-2">Website Marketing</h3>
+          <p class="text-slate-700 mt-2">Web strategies that grow your business.</p>
+          <div id="details1" class="card-details text-sm text-slate-600">
+            <ul class="list-disc list-inside">
+              <li>Website Strategy & Design – Insights-driven, measurable growth.</li>
+              <li>SEO & Analytics – Optimize search visibility and ROI.</li>
+              <li>Content & CRO – Turn visitors into loyal customers.</li>
+            </ul>
+          </div>
+          <svg class="arrow w-5 h-5 text-blue-700 mt-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </div>
+
+        <!-- Mobile App Services Card -->
+        <div
+          class="bg-slate-50 p-6 rounded-xl shadow-md hover:shadow-xl hover:ring hover:ring-blue-100 hover:scale-[1.02] transition cursor-pointer"
+          onclick="toggleCard(this)"
+          role="button"
+          tabindex="0"
+          aria-expanded="false"
+          aria-controls="details2"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <img src="apps.jpg" 
+               alt="Mobile App Services" 
+               class="mb-4 mx-auto w-50 h-50 object-contain rounded-full shadow-md" />
+          <h3 class="text-xl font-semibold text-blue-900 mb-2">Mobile App Services</h3>
+          <p class="text-slate-700 mt-2">Build apps that engage and retain users.</p>
+          <div id="details2" class="card-details text-sm text-slate-600">
+            <ul class="list-disc list-inside">
+              <li>Custom App Design & Development – UX/UI excellence.</li>
+              <li>Marketing Integration & Automation – Real-time engagement.</li>
+              <li>Performance Tracking & Optimization – Data-driven improvements.</li>
+            </ul>
+          </div>
+          <svg class="arrow w-5 h-5 text-blue-700 mt-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </div>
+
+        <!-- AI for Marketing Card -->
+        <div
+          class="bg-slate-50 p-6 rounded-xl shadow-md hover:shadow-xl hover:ring hover:ring-blue-100 hover:scale-[1.02] transition cursor-pointer"
+          onclick="toggleCard(this)"
+          role="button"
+          tabindex="0"
+          aria-expanded="false"
+          aria-controls="details3"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <img src="Ai.jpg" 
+               alt="AI for Marketing" 
+               class="mb-4 mx-auto w-50 h-50 object-contain rounded-full shadow-md" />
+          <h3 class="text-xl font-semibold text-blue-900 mb-2">AI for Marketing</h3>
+          <p class="text-slate-700 mt-2">Automate, personalize, and predict marketing outcomes.</p>
+          <div id="details3" class="card-details text-sm text-slate-600">
+            <ul class="list-disc list-inside">
+              <li>Customer Segmentation & Targeting – Right message at the right time.</li>
+              <li>Predictive Analytics & Personalization – Optimize campaigns at scale.</li>
+              <li>AI-Optimized Campaign Management – Maximize ad performance and ROI.</li>
+            </ul>
+          </div>
+          <svg class="arrow w-5 h-5 text-blue-700 mt-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </div>
+
+        <!-- Social Media Services Card -->
+        <div
+          class="bg-slate-50 p-6 rounded-xl shadow-md hover:shadow-xl hover:ring hover:ring-blue-100 hover:scale-[1.02] transition cursor-pointer"
+          onclick="toggleCard(this)"
+          role="button"
+          tabindex="0"
+          aria-expanded="false"
+          aria-controls="details4"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <img src="social.jpg" 
+               alt="Social Media Services" 
+               class="mb-4 mx-auto w-50 h-50 object-contain rounded-full shadow-md" />
+          <h3 class="text-xl font-semibold text-blue-900 mb-2">Social Media Services</h3>
+          <p class="text-slate-700 mt-2">Build authentic connections with your audience.</p>
+          <div id="details4" class="card-details text-sm text-slate-600">
+            <ul class="list-disc list-inside">
+              <li>Content Creation & Management – Engage your audience effectively.</li>
+              <li>Strategy & Consulting – Align goals with audience insights.</li>
+              <li>Analytics & Reporting – Turn engagement data into growth.</li>
+            </ul>
+          </div>
+          <svg class="arrow w-5 h-5 text-blue-700 mt-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </div>
+
+        <!-- Digital Marketing Services Card -->
+        <div
+          class="bg-slate-50 p-6 rounded-xl shadow-md hover:shadow-xl hover:ring hover:ring-blue-100 hover:scale-[1.02] transition cursor-pointer"
+          onclick="toggleCard(this)"
+          role="button"
+          tabindex="0"
+          aria-expanded="false"
+          aria-controls="details5"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          <img src="digital.jpg" 
+               alt="Digital Marketing Services" 
+               class="mb-4 mx-auto w-50 h-50 object-contain rounded-full shadow-md" />
+          <h3 class="text-xl font-semibold text-blue-900 mb-2">Digital Marketing Services</h3>
+          <p class="text-slate-700 mt-2">Integrated campaigns that drive conversions.</p>
+          <div id="details5" class="card-details text-sm text-slate-600">
+            <ul class="list-disc list-inside">
+              <li>Branding & Visual Identity – Build trust and recognition.</li>
+              <li>Email Marketing & CRM – Automated personalized campaigns.</li>
+              <li>Website & Mobile Optimization – Fast, secure, mobile-first experiences.</li>
+            </ul>
+          </div>
+          <svg class="arrow w-5 h-5 text-blue-700 mt-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center mt-20" data-aos="fade-up" data-aos-delay="500">
+        <h4 class="text-2xl font-bold mb-4 text-blue-900">Need help choosing the right service?</h4>
+        <a href="contact.html" class="inline-block bg-blue-700 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-800 transition">
+          Let's Talk
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white text-center p-6">
+    <p>&copy; 2025 Northquest Marketing. All Rights Reserved.</p>
+    <p><a href="mailto:info@northquest.com" class="underline">info@northquest.com</a> | +256 700 000 000</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function toggleCard(card) {
+      document.querySelectorAll('.card-details.open').forEach(d => {
+        if (!card.contains(d)) {
+          d.classList.remove('open');
+          const parentCard = d.closest('.cursor-pointer');
+          if (parentCard) {
+            parentCard.setAttribute('aria-expanded', 'false');
+            parentCard.querySelector('.arrow')?.classList.remove('open');
+          }
+        }
+      });
+
+      const details = card.querySelector('.card-details');
+      const arrow = card.querySelector('.arrow');
+      const expanded = card.getAttribute('aria-expanded') === 'true';
+
+      if (expanded) {
+        details.classList.remove('open');
+        arrow.classList.remove('open');
+        card.setAttribute('aria-expanded', 'false');
+      } else {
+        details.classList.add('open');
+        arrow.classList.add('open');
+        card.setAttribute('aria-expanded', 'true');
+      }
+    }
+  </script>
+</body>
+</html>

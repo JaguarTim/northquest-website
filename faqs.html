@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQs - Marketing Consultancy</title>
+  <style>
+    /* Base styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff0f6;
+      color: #4a3f4a;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #b663a3;
+      font-weight: 700;
+      margin-bottom: 40px;
+      font-size: 2.8rem;
+      font-family: 'Georgia', serif;
+      letter-spacing: 1.2px;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(182, 99, 163, 0.2);
+      padding: 30px 40px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #f4d7e6;
+      padding: 20px 0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      font-size: 1.2rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: #7a3f7a;
+      position: relative;
+      padding-right: 30px;
+      transition: color 0.3s ease;
+    }
+
+    .faq-question:hover {
+      color: #a85ba8;
+    }
+
+    /* Plus/minus icon */
+    .faq-question::after {
+      content: '+';
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 1.6rem;
+      line-height: 1;
+      color: #b663a3;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-question.active::after {
+      content: '−';
+      transform: rotate(180deg);
+      color: #e085cc;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      color: #5e3d5e;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-top: 8px;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+      padding-right: 20px;
+    }
+
+    .faq-answer.open {
+      max-height: 500px; /* large enough to show content */
+      padding-top: 10px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 15px;
+      }
+
+      .faq-container {
+        padding: 25px 20px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Frequently Asked Questions</h1>
+
+  <div class="faq-container">
+
+    <div class="faq-item">
+      <div class="faq-question">What services does your marketing consultancy offer?</div>
+      <div class="faq-answer">
+        We provide a wide range of marketing services including strategy development, brand positioning, digital marketing, social media management, content creation, market research, and campaign analysis.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How can a marketing consultancy help my business?</div>
+      <div class="faq-answer">
+        Our team analyzes your business goals and market environment to develop tailored marketing strategies that increase brand awareness, generate leads, and boost sales.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">What industries do you specialize in?</div>
+      <div class="faq-answer">
+        We work with clients across various sectors including technology, retail, healthcare, finance, and startups. Our approach is always customized to meet the unique needs of each industry.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How do you measure the success of a marketing campaign?</div>
+      <div class="faq-answer">
+        We use key performance indicators (KPIs) such as website traffic, conversion rates, social media engagement, and ROI to track the effectiveness of our campaigns.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Can you help with digital marketing only?</div>
+      <div class="faq-answer">
+        No, we offer both traditional and digital marketing solutions. Whether it’s SEO, PPC, print media, or event marketing, we have the expertise to deliver results.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How long does it take to see results from your marketing efforts?</div>
+      <div class="faq-answer">
+        This varies depending on the scope and type of campaign. Some digital campaigns may show results within weeks, while brand building and market repositioning can take several months.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Do you offer customized marketing plans?</div>
+      <div class="faq-answer">
+        Absolutely! Every business is unique, so we tailor our strategies to align with your specific goals, budget, and target audience.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">What is your pricing model?</div>
+      <div class="faq-answer">
+        We offer flexible pricing based on the services required. After understanding your needs, we provide a detailed proposal with clear costs.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How do I get started with your consultancy?</div>
+      <div class="faq-answer">
+        Simply reach out to us via our contact page or call us directly. We’ll schedule an initial consultation to discuss your business and marketing goals.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Do you provide ongoing support after the campaign?</div>
+      <div class="faq-answer">
+        Yes, we offer ongoing analysis, optimization, and support to ensure your marketing efforts continue to perform and adapt to changing market conditions.
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // FAQ toggle behavior
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const currentlyActive = document.querySelector('.faq-question.active');
+        if (currentlyActive && currentlyActive !== question) {
+          currentlyActive.classList.remove('active');
+          currentlyActive.nextElementSibling.classList.remove('open');
+        }
+
+        question.classList.toggle('active');
+        question.nextElementSibling.classList.toggle('open');
+      });
+    });
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blog</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-600">My Blog</h1>
+      <nav>
+        <a href="#" class="px-3 text-gray-700 hover:text-blue-600">Home</a>
+        <a href="#" class="px-3 text-gray-700 hover:text-blue-600">About</a>
+        <a href="#" class="px-3 text-gray-700 hover:text-blue-600">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Blog Posts Section -->
+  <main class="max-w-6xl mx-auto px-4 py-8">
+    <h2 class="text-3xl font-bold mb-6">Latest Posts</h2>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <!-- Blog Card Example -->
+      <article class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden">
+        <img src="https://placekitten.com/600/400" alt="Post image" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Post Title 1</h3>
+          <p class="text-gray-600 mb-4">This is a short preview of the blog post content. The owner can write about updates, share images or even embed videos...</p>
+          <a href="#" class="text-blue-600 hover:underline font-medium">Read more →</a>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden">
+        <iframe class="w-full h-48" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Post with Video</h3>
+          <p class="text-gray-600 mb-4">This post has an embedded YouTube video. The blog can support images, text, and videos easily...</p>
+          <a href="#" class="text-blue-600 hover:underline font-medium">Read more →</a>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden">
+        <img src="https://placehold.co/600x400" alt="Post image" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Post Title 3</h3>
+          <p class="text-gray-600 mb-4">Another example post. This layout can handle unlimited posts, and Netlify CMS will push new ones here...</p>
+          <a href="#" class="text-blue-600 hover:underline font-medium">Read more →</a>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 mt-12">
+    <div class="max-w-6xl mx-auto px-4 py-6 text-center">
+      <p>&copy; 2025 My Blog. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
